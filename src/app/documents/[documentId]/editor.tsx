@@ -16,7 +16,9 @@ import { Underline } from "@tiptap/extension-underline"
 import { FontFamily} from "@tiptap/extension-font-family"
 import TextStyle from "@tiptap/extension-text-style"
 import Link from "@tiptap/extension-link"
+import TextAlign from "@tiptap/extension-text-align"
 
+import { FontSizeExtension } from "@/extensions/font-size";
 export const Editor = () => {
   const { setEditor } = useEditorStore();
   const editor = useEditor({
@@ -53,6 +55,10 @@ export const Editor = () => {
     },
     extensions: [
       StarterKit,
+      FontSizeExtension,
+      TextAlign.configure({
+        types: ['heading','paragraph']
+      }),
       Link.configure({
         openOnClick: false,
         autolink: true,
