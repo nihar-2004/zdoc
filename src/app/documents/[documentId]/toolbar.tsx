@@ -652,9 +652,11 @@ export const Toolbar = () => {
       <Separator className="h-6 w-px bg-neutral-300" />
       <HeadingLevelButton/>
       <FontSizeButton/>
+      <Separator className="h-6 w-px bg-neutral-300" />
       {sections[1].map((item) => (
         <ToolbarButton key={item.label} {...item} />
       ))}
+      <Separator className="h-6 w-px bg-neutral-300" />
       <TextColorButton/>
       <HighlightColorButton/>
       <Separator className="h-6 w-px bg-neutral-300" />
